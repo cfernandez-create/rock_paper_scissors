@@ -4,56 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"></style>
     <title>Document</title>
 </head>
 <body>
-    <script>
-        function cpuChoice(){
-            const choices = ['rock', 'paper', 'scissors'];
-            const choicesArray = Math.floor(Math.random()*choices.length);
-            return choices[choicesArray];
-        }
+    <header class="header">
+        <h1 class="header__rounds">Rounds: 0/5</h1>
+    </header>
+    <section class="game-result">
+        <h1 class="game-result__result"></h1>
+    </section>
 
-        function gameRound(playerPlays, cpuPlays){
-                playerPlays = playerPlays.toLowerCase();
+    <section class="scores">
+        <div>
+            <h1 class="scores__player-score"></h1>
+            <img class="player" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
+        </div>
+       
+        <div>
+           
+            <h1 class="scores__cpu-score"></h1>
+            <img class="computer" src="https://howtodrawforkids.com/wp-content/uploads/2022/01/how-to-draw-a-robot-for-kids.jpg">
+        </div>
+    </section>
 
-            if (playerPlays === cpuPlays){
-                return 'Tie!';
-            } 
-            else if (playerPlays === 'rock' && cpuPlays === 'scissors' ||
-                        playerPlays === 'scissors' && cpuPlays === 'paper' ||
-                        playerPlays === 'paper' && cpuPlays === 'rock') {
-                return 'You win!';
-                        }
-            else {
-                return 'You lose!';
-            }
-        }
-        
-        function start(){
-            playerScore = 0;
-            cpuScore = 0;
-        
-        for(let i=0; i < 5; i++){
-            const playerPlays = prompt(`Choose 'rock', 'paper', or 'scissors'`);
-            const cpuPlays = cpuChoice();
-            const roundPoint = gameRound(playerPlays, cpuPlays);
-            console.log(roundPoint);
+    <section class="choices">
+        <div class="choices__rock">
+            <button class="rock buttons">🪨</button>
+        </div>
+        <div class="choices__paper">
+            <button class="paper buttons">📃</button>
+        </div>
+        <div class="choices__scissors">
+            <button class="scissors buttons">✂️</button>
+        </div>
+    </section>
 
-            if(roundPoint.includes('win')){
-                playerScore++;
-            }
-            else if (roundPoint.includes('lose')) {
-                cpuScore++
-        }
-        }
-            console.log(`Final score: YOU ${playerScore} - ${cpuScore} CPU`);
-        }
+    <section class="new-game__container">
+        <button class="new-game__btn">START GAME</button>
+    </section>
 
-        start();
 
+    <script src="script.js">
     </script>
-
-
 </body>
 </html>

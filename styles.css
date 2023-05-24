@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+font-family: 'Courier';
+}
+
+
+.header{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin: 50px;
+}
+
+.scores{
+    display:flex;
+    flex: 1;
+    justify-content: center;
+    padding: 50px;
+}
+
+
+.scores__player-score{
+   padding-right: 120px;
+}
+
+
+.choices{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.buttons{
+    padding: 20px;
+    margin: 20px;
+    font-size: 2rem;
+    border-top: 0;
+    border-right: 1px solid rgb(146, 146, 146);
+    border-left: 0;
+    border-bottom: 1px solid rgb(122, 122, 122);
+    box-shadow: 4px 4px 4px 4px rgba(15, 15, 15, 0.5);
+    transition: 0.5s;
+    height: 100px;
+    width: 100px;
+}
+
+.buttons:hover{
+    font-size:3rem;
+    box-shadow: 6px 6px 6px 6px rgba(39, 38, 38, 0.9);
+}
+
+.new-game__container{
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+    height: 100px;
+}
+
+.new-game__btn{
+    position: absolute;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: courier;
+    font-weight: 800;
+    font-size: 1rem;
+    border-top: 0;
+    border-right: 1px solid rgb(146, 146, 146);
+    border-left: 0;
+    border-bottom: 1px solid rgb(122, 122, 122);
+    box-shadow: 4px 4px 4px 4px rgba(15, 15, 15, 0.5);
+    transition: 0.5s;
+}
+
+.new-game__btn:hover{
+    font-size:1.1rem;
+    box-shadow: 6px 6px 6px 6px rgba(39, 38, 38, 0.9);
+}
+
+.game-result__result{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.player{
+    width: 30%;
+}
+
+.computer{
+    width: 60%;
+}
